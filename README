@@ -22,6 +22,12 @@
 
  Release Notes:
  --------------
+  ------
+ |v00-02|
+  ------
+ F. Gaede
+   - made compatible with c++11
+   - removed -ansi -pedantic -Wno-long-long
 
   ------
  |v00-01|
