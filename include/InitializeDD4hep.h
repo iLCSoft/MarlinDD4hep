@@ -45,9 +45,11 @@ public:
   
  protected:
 
-  /** Input collection name.
-   */
+  ///path to dd4p compact detector xml file
   std::string _dd4hepFileName ;
+
+  ///name of lcdd parameter for encoding string
+  std::string _encodingStringParameter;
 
 } ;
 

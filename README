@@ -22,6 +22,24 @@
 
  Release Notes:
  --------------
+
+  ------
+ |v00-03|
+  ------
+
+F. Gaede
+
+  - apply patch by A.Sailer:
+    - add parameter "EncodingStringParameterName" 
+    - if specified it will be used to ovewrite 
+      ILDCellID0::encoder_string with the lccd parameter
+      of that name
+
+  - Note: we might decide in the future to introduce a
+    a fixed canonical name for this, e.g.
+   "TrkDetCellID0_encoder_string" 
+ 
+
   ------
  |v00-02|
   ------
