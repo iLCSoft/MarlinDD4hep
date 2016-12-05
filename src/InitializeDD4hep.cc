@@ -30,6 +30,12 @@ InitializeDD4hep::InitializeDD4hep() : Processor("InitializeDD4hep"),
 			      std::string("")
 			      );
 
+  registerOptionalParameter( "EncodingStringParameter" ,
+			      "Alternate name for EncodingStringParameterName",
+			      _encodingStringParameter,
+			      std::string("")
+			      );
+
 }
 
 void InitializeDD4hep::init() { 
