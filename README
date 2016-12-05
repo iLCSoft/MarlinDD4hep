@@ -23,6 +23,15 @@
  Release Notes:
  --------------
 
+A.Sailer
+
+  - ignore warnings from external packages
+  - add parameter "EncodingStringParameter", alternate spelling of "EncodingStringParameterName" for compatibility, 
+     - Alternate spelling can be phased out once everyone has moved to new installation of this package
+  - Also change DDKaltest:DDKaltestConf instance of encoding string
+     - MarlinDD4hep now depends on DDKalTest until DDKalTestConf is moved to LCIO
+
+
   ------
  |v00-03|
   ------
