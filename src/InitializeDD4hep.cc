@@ -2,6 +2,7 @@
 
 #include "DD4hep/LCDD.h"
 
+#include "DDKalTest/DDKalTestConf.h"
 #include "UTIL/ILDConf.h"
 
 using namespace marlin ;
@@ -56,7 +57,7 @@ void InitializeDD4hep::init() {
 			   << std::endl;
 
     ILDCellID0::encoder_string = lcdd.constantAsString( _encodingStringParameter );
-
+    DDKalTest::CellIDEncoding::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
   }
 
 }
