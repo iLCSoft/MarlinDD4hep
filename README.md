@@ -1,30 +1,22 @@
-##############################################################
-#
 #  MarlinDD4hep - instantiate DD4hep geometry for Marlin
-#
-#
-# F.Gaede, CERN/DESY
-# June 2015
-##############################################################
 
+F.Gaede, CERN/DESY
+June 2015
 
- [![Build Status](https://travis-ci.org/iLCSoft/MarlinDD4hep.svg?branch=master)](https://travis-ci.org/iLCSoft/MarlinDD4hep)
+[![Build Status](https://travis-ci.org/iLCSoft/MarlinDD4hep.svg?branch=master)](https://travis-ci.org/iLCSoft/MarlinDD4hep)
 
- Provides one processor to initialize a DD4hep detector geometry
- from a compact file for a Marlin job.
+Provides one processor to initialize a DD4hep detector geometry
+from a compact file for a Marlin job.
  
- InitializeDD4hep:
- @parameter: DD4hepXMLFile:  compact xml file to load 
+InitializeDD4hep:
+@parameter: DD4hepXMLFile:  compact xml file to load 
 
- NB: This processor has to be run  before any processor that 
-     accesses the detector geometry, i.e. best to run it as 
-     first processor in the steering file.
+NB: This processor has to be run  before any processor that 
+    accesses the detector geometry, i.e. best to run it as 
+    first processor in the steering file.
 
-
-==================================================================
-
- Release Notes:
- --------------
+Release Notes:
+--------------
 
 A.Sailer
 
@@ -35,10 +27,9 @@ A.Sailer
      - MarlinDD4hep now depends on DDKalTest until DDKalTestConf is moved to LCIO
 
 
-  ------
- |v00-03|
-  ------
-
+--------
+|v00-03|
+--------
 F. Gaede
 
   - apply patch by A.Sailer:
@@ -52,14 +43,16 @@ F. Gaede
    "TrkDetCellID0_encoder_string" 
  
 
-  ------
- |v00-02|
-  ------
- F. Gaede
-   - made compatible with c++11
-   - removed -ansi -pedantic -Wno-long-long
+--------
+|v00-02|
+--------
 
-  ------
- |v00-01|
-  ------
+F. Gaede
+  - made compatible with c++11
+  - removed -ansi -pedantic -Wno-long-long
+
+--------
+|v00-01|
+--------
+
       - first release 
