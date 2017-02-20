@@ -27,9 +27,9 @@ A.Sailer
      - MarlinDD4hep now depends on DDKalTest until DDKalTestConf is moved to LCIO
 
 
---------
-|v00-03|
---------
+
+### v00-03
+
 F. Gaede
 
   - apply patch by A.Sailer:
@@ -43,16 +43,14 @@ F. Gaede
    "TrkDetCellID0_encoder_string" 
  
 
---------
-|v00-02|
---------
+### v00-02|
+
 
 F. Gaede
   - made compatible with c++11
   - removed -ansi -pedantic -Wno-long-long
 
---------
-|v00-01|
---------
 
-      - first release 
+### v00-01
+
+  - first release 
