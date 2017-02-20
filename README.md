@@ -7,6 +7,9 @@
 # June 2015
 ##############################################################
 
+
+ [![Build Status](https://travis-ci.org/iLCSoft/MarlinDD4hep.svg?branch=master)](https://travis-ci.org/iLCSoft/MarlinDD4hep)
+
  Provides one processor to initialize a DD4hep detector geometry
  from a compact file for a Marlin job.
  
