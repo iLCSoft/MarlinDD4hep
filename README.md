@@ -1,56 +1,25 @@
-#  MarlinDD4hep - instantiate DD4hep geometry for Marlin
-
-F.Gaede, CERN/DESY
-June 2015
-
+#  MarlinDD4hep 
 [![Build Status](https://travis-ci.org/iLCSoft/MarlinDD4hep.svg?branch=master)](https://travis-ci.org/iLCSoft/MarlinDD4hep)
 
 Provides one processor to initialize a DD4hep detector geometry
 from a compact file for a Marlin job.
- 
+
+MarlinDD4hep is distributed under the [GPLv3 License](http://www.gnu.org/licenses/gpl-3.0.en.html)
+
+[![License](https://www.gnu.org/graphics/gplv3-127x51.png)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+## Notes
+
 InitializeDD4hep:
 @parameter: DD4hepXMLFile:  compact xml file to load 
 
-NB: This processor has to be run  before any processor that 
-    accesses the detector geometry, i.e. best to run it as 
-    first processor in the steering file.
+NB: This processor has to be run  before any processor that accesses the detector geometry, i.e. best to run it as first processor in the steering file.
 
-Release Notes:
---------------
+## License and Copyright
+Copyright (C), MarlinDD4hep Authors
 
-A.Sailer
+MarlinDD4hep is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-  - ignore warnings from external packages
-  - add parameter "EncodingStringParameter", alternate spelling of "EncodingStringParameterName" for compatibility, 
-     - Alternate spelling can be phased out once everyone has moved to new installation of this package
-  - Also change DDKaltest:DDKaltestConf instance of encoding string
-     - MarlinDD4hep now depends on DDKalTest until DDKalTestConf is moved to LCIO
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-
-
-### v00-03
-
-F. Gaede
-
-  - apply patch by A.Sailer:
-    - add parameter "EncodingStringParameterName" 
-    - if specified it will be used to ovewrite 
-      ILDCellID0::encoder_string with the lccd parameter
-      of that name
-
-  - Note: we might decide in the future to introduce a
-    a fixed canonical name for this, e.g.
-   "TrkDetCellID0_encoder_string" 
- 
-
-### v00-02|
-
-
-F. Gaede
-  - made compatible with c++11
-  - removed -ansi -pedantic -Wno-long-long
-
-
-### v00-01
-
-  - first release 
+You should have received a copy of the GNU General Public License long with this program.  If not, see <http://www.gnu.org/licenses/>.
