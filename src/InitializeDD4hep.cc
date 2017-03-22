@@ -3,7 +3,7 @@
 #include "DD4hep/LCDD.h"
 
 #include "DDKalTest/DDKalTestConf.h"
-#include "UTIL/ILDConf.h"
+#include "UTIL/LCTrackerConf.h"
 
 using namespace marlin ;
 
@@ -25,7 +25,7 @@ InitializeDD4hep::InitializeDD4hep() : Processor("InitializeDD4hep"),
 			      );
 
   registerProcessorParameter( "EncodingStringParameterName" ,
-			      "If given, ILDCellID0::encoder_string will be overwritten with the LCDD parameter of that name.",
+			      "If given, the LCDD parameter of that name will be used as argument to LCTrackerCellID::set_encoding_string()",
 			      _encodingStringParameter,
 			      std::string("")
 			      );
@@ -57,12 +57,12 @@ void InitializeDD4hep::init() {
   if ( _encodingStringParameter != "" ){
 
     streamlog_out(MESSAGE) << " ---------------------------------------------------------------------------------- \n" 
-			   << "  ILDCellID0::encoder_string will set to   " << lcdd.constantAsString( _encodingStringParameter ) << std::endl 
+			   << "  LCTrackerCellID::_encoding will set to   " << lcdd.constantAsString( _encodingStringParameter ) << std::endl 
 			   << "  as specified in lccd parameter  : " << _encodingStringParameter  << std::endl 
 			   << " ---------------------------------------------------------------------------------- \n"
 			   << std::endl;
 
-    ILDCellID0::encoder_string = lcdd.constantAsString( _encodingStringParameter );
+    LCTrackerCellID::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
     DDKalTest::CellIDEncoding::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
   }
 
