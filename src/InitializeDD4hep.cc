@@ -2,7 +2,6 @@
 
 #include "DD4hep/LCDD.h"
 
-#include "DDKalTest/DDKalTestConf.h"
 #include "UTIL/LCTrackerConf.h"
 
 using namespace marlin ;
@@ -63,7 +62,6 @@ void InitializeDD4hep::init() {
 			   << std::endl;
 
     LCTrackerCellID::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
-    DDKalTest::CellIDEncoding::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
   }
 
 }
