@@ -1,5 +1,6 @@
 #  MarlinDD4hep 
 [![Build Status](https://travis-ci.org/iLCSoft/MarlinDD4hep.svg?branch=master)](https://travis-ci.org/iLCSoft/MarlinDD4hep)
+[![Coverity Scan Build Status](https://scan.coverity.com/projects/11934/badge.svg)](https://scan.coverity.com/projects/ilcsoft-marlindd4hep)
 
 Provides one processor to initialize a DD4hep detector geometry
 from a compact file for a Marlin job.
