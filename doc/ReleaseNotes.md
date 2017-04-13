@@ -1,3 +1,8 @@
+# v00-04
+
+* 2017-04-07 Andre Sailer ([PR#4](https://github.com/iLCSoft/MarlinDD4hep/pull/4))
+  - DDKalTestConf replaced by LCTrackerConf
+
 A.Sailer
 - ignore warnings from external packages
 - add parameter "EncodingStringParameter", alternate spelling of "EncodingStringParameterName" for compatibility, 
