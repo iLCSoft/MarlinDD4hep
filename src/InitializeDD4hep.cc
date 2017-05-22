@@ -62,6 +62,11 @@ void InitializeDD4hep::init() {
 			   << std::endl;
 
     LCTrackerCellID::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
+  } else {
+    streamlog_out(ERROR) << " ---------------------------------------------------------------------------------- \n"
+                         << "  No EncodingStringParameter set !!! \n"
+                         << " ---------------------------------------------------------------------------------- \n"
+                         << std::endl;
   }
 
 }
