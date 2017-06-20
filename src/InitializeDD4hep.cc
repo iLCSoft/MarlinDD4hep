@@ -1,6 +1,6 @@
 #include "InitializeDD4hep.h"
 
-#include "DD4hep/LCDD.h"
+#include "DD4hep/Detector.h"
 
 #include "UTIL/LCTrackerConf.h"
 
@@ -15,7 +15,7 @@ InitializeDD4hep::InitializeDD4hep() : Processor("InitializeDD4hep"),
 {
   
   // modify processor description
-  _description = "InitializeDD4hep reads a compact xml file and initializes the DD4hep::LCDD object" ;
+  _description = "InitializeDD4hep reads a compact xml file and initializes the dd4hep::Detector object" ;
   
   registerProcessorParameter( "DD4hepXMLFile" , 
 			      "Name of the DD4hep compact xml file to load"  ,
@@ -24,7 +24,7 @@ InitializeDD4hep::InitializeDD4hep() : Processor("InitializeDD4hep"),
 			      );
 
   registerProcessorParameter( "EncodingStringParameterName" ,
-			      "If given, the LCDD parameter of that name will be used as argument to LCTrackerCellID::set_encoding_string()",
+			      "If given, the Compact File parameter of that name will be used as argument to LCTrackerCellID::set_encoding_string()",
 			      _encodingStringParameter,
 			      std::string("")
 			      );
@@ -45,23 +45,23 @@ void InitializeDD4hep::init() {
   streamlog_out(MESSAGE) << " -------------------------------------" << std::endl
 			 << " ---- Initializing DD4hep from file  " << _dd4hepFileName << " ... " << std::endl ;
   
-  DD4hep::Geometry::LCDD& lcdd = DD4hep::Geometry::LCDD::getInstance();
+  dd4hep::Detector& theDetector = dd4hep::Detector::getInstance();
   
-  lcdd.fromCompact( _dd4hepFileName );
+  theDetector.fromCompact( _dd4hepFileName );
   
-  streamlog_out( MESSAGE )  << " ---- instantiated  geometry for detector " << lcdd.header().name()  << std::endl 
+  streamlog_out( MESSAGE )  << " ---- instantiated  geometry for detector " << theDetector.header().name()  << std::endl
 			    << " -------------------------------------" << std::endl ;
 
 
   if ( _encodingStringParameter != "" ){
 
     streamlog_out(MESSAGE) << " ---------------------------------------------------------------------------------- \n" 
-			   << "  LCTrackerCellID::_encoding will set to   " << lcdd.constantAsString( _encodingStringParameter ) << std::endl 
+			   << "  LCTrackerCellID::_encoding will set to   " << theDetector.constantAsString( _encodingStringParameter ) << std::endl
 			   << "  as specified in lccd parameter  : " << _encodingStringParameter  << std::endl 
 			   << " ---------------------------------------------------------------------------------- \n"
 			   << std::endl;
 
-    LCTrackerCellID::instance().set_encoding_string( lcdd.constantAsString( _encodingStringParameter ) );
+    LCTrackerCellID::instance().set_encoding_string( theDetector.constantAsString( _encodingStringParameter ) );
   }
 
 }
