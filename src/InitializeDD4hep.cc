@@ -73,5 +73,9 @@ void InitializeDD4hep::processEvent( LCEvent * ) { }
 
 void InitializeDD4hep::check( LCEvent *  ) { }
 
-void InitializeDD4hep::end(){ }
+void InitializeDD4hep::end(){
+
+  dd4hep::Detector::getInstance().destroyInstance();
+
+}
 
