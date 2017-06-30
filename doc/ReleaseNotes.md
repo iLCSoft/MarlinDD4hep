@@ -1,3 +1,11 @@
+# v00-05
+
+* 2017-06-22 Andre Sailer ([PR#7](https://github.com/iLCSoft/MarlinDD4hep/pull/7))
+  - Destroy Detector instance at the end to make valgrind happier
+
+* 2017-06-20 Andre Sailer ([PR#6](https://github.com/iLCSoft/MarlinDD4hep/pull/6))
+  - Adapt to namespace changes in DD4hep
+
 # v00-04
 
 * 2017-04-07 Andre Sailer ([PR#4](https://github.com/iLCSoft/MarlinDD4hep/pull/4))
