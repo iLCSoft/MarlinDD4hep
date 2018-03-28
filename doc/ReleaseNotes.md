@@ -1,3 +1,5 @@
+# v00-06
+
 # v00-05
 
 * 2017-06-22 Andre Sailer ([PR#7](https://github.com/iLCSoft/MarlinDD4hep/pull/7))
