@@ -7,6 +7,7 @@
 FIND_PACKAGE( Doxygen )
 
 IF( DOXYGEN_FOUND )
+    FILE(GLOB DOXYGEN_SOURCES ../include/* ../src/*)
 
     # build documentation out-of-source
     SET( DOC_SRC_DIR "${PROJECT_SOURCE_DIR}/doc" )
@@ -26,7 +27,7 @@ IF( DOXYGEN_FOUND )
                 "${DOXYGEN_EXECUTABLE}"
         WORKING_DIRECTORY "${DOC_SRC_DIR}"
         COMMENT "Building API Documentation..."
-        DEPENDS Doxyfile CMakeLists.txt ../include/* ../src/*
+        DEPENDS Doxyfile CMakeLists.txt ${DOXYGEN_SOURCES}
     )
 
     # add doc target
