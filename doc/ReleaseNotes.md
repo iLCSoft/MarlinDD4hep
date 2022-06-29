@@ -1,3 +1,9 @@
+# v00-06-01
+
+* 2022-06-28 Thomas Madlener ([PR#8](https://github.com/iLCSoft/MarlinDD4hep/pull/8))
+  - Migrate CI to github actions and remove travis CI config
+  - Fix doxygen cmake config to work with newer cmake versions
+
 # v00-06
 
 # v00-05
