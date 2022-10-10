@@ -47,7 +47,7 @@ void InitializeDD4hep::init() {
   else if (_logLevelName.find("MESSAGE") != std::string::npos) dd4hep::setPrintLevel(dd4hep::INFO);
   else if (_logLevelName.find("WARNING") != std::string::npos) dd4hep::setPrintLevel(dd4hep::WARNING);
   else if (_logLevelName.find("ERROR") != std::string::npos) dd4hep::setPrintLevel(dd4hep::ERROR);
-  else if (_logLevelName.find("SILENT") != std::string::npos) dd4hep::setPrintLevel(dd4hep::NOLOG);
+  else if (_logLevelName.find("SILENT") != std::string::npos) dd4hep::setPrintLevel(dd4hep::ALWAYS);
   else dd4hep::setPrintLevel(dd4hep::INFO);
 
   streamlog_out(MESSAGE) << " -------------------------------------" << std::endl
