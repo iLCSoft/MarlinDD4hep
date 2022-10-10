@@ -1,5 +1,6 @@
 #include "InitializeDD4hep.h"
 
+#include "DD4hep/Printout.h"
 #include "DD4hep/Detector.h"
 
 #include "UTIL/LCTrackerConf.h"
@@ -42,6 +43,13 @@ void InitializeDD4hep::init() {
   // usually a good idea to
   // printParameters() ;
 
+  if (_logLevelName.find("DEBUG") != std::string::npos) dd4hep::setPrintLevel(dd4hep::DEBUG);
+  else if (_logLevelName.find("MESSAGE") != std::string::npos) dd4hep::setPrintLevel(dd4hep::INFO);
+  else if (_logLevelName.find("WARNING") != std::string::npos) dd4hep::setPrintLevel(dd4hep::WARNING);
+  else if (_logLevelName.find("ERROR") != std::string::npos) dd4hep::setPrintLevel(dd4hep::ERROR);
+  else if (_logLevelName.find("SILENT") != std::string::npos) dd4hep::setPrintLevel(dd4hep::NOLOG);
+  else dd4hep::setPrintLevel(dd4hep::INFO);
+
   streamlog_out(MESSAGE) << " -------------------------------------" << std::endl
 			 << " ---- Initializing DD4hep from file  " << _dd4hepFileName << " ... " << std::endl ;
   
@@ -78,4 +86,3 @@ void InitializeDD4hep::end(){
   dd4hep::Detector::getInstance().destroyInstance();
 
 }
-
