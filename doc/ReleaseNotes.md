@@ -1,3 +1,11 @@
+# v00-06-02
+
+* 2022-12-02 Thomas Madlener ([PR#10](https://github.com/iLCSoft/MarlinDD4hep/pull/10))
+  - Remove the obsolete gcc8 based workflow and update github actions to latest available versions.
+
+* 2022-12-02 Bohdan Dudar ([PR#9](https://github.com/iLCSoft/MarlinDD4hep/pull/9))
+  - Verbosity levels now correspondingly control DD4hep printouts
+
 # v00-06-01
 
 * 2022-06-28 Thomas Madlener ([PR#8](https://github.com/iLCSoft/MarlinDD4hep/pull/8))
