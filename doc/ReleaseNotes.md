@@ -1,3 +1,8 @@
+# v00-06-03
+
+* 2026-07-04 Juan Miguel Carceller ([PR#12](https://github.com/iLCSoft/MarlinDD4hep/pull/12))
+  - Bump the minimum cmake version to 3.10 to allow building with CMake 4
+
 # v00-06-02
 
 * 2022-12-02 Thomas Madlener ([PR#10](https://github.com/iLCSoft/MarlinDD4hep/pull/10))
